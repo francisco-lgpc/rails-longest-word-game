@@ -1,0 +1,23 @@
+
+<div class="header-game text-center">
+  <h2></h2>
+</div>
+
+<div class="container text-center" id="grid">
+  <ul class="list-inline">
+    <% @grid.each do |l| %>
+      <li> <%= image_tag("#{l.downcase}.png") %> </li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="container text-center">
+  <form action="score" method="get" class="form-inline">
+    <input type="hidden" name="start_time" value="<%= @start_time %>">
+    <input type="hidden" name="grid" value="<%= @grid.join %>">
+
+    <label for="attempt">Your word</label>
+    <input type="text" placeholder="eg: cool" name="attempt" id="attempt" class="form-control">
+    <input type="submit" class="btn btn-danger form-control">
+  </form>
+</div>

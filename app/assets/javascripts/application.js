@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).ready( function() {
+
+
+
+
+
+  /*$("#grid-init .btn").on('submit', function() {
+    $("#grid-init").addClass("hidden");
+    $("#grid").removeClass("hidden")
+  });*/
+});
